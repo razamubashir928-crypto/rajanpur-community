@@ -1,0 +1,816 @@
+
+/* ========================================
+   RAJANPUR COMMUNITY INITIATIVE
+   Theme: Premium Navy + Gold
+======================================== */
+
+/* 1. Design system */
+:root {
+    --navy: #0b1424;
+    --navy-light: #111f34;
+    --navy-card: #14243a;
+    --gold: #e4b65c;
+    --gold-light: #f5d58e;
+    --teal: #48c5b5;
+    --white: #f7f8fc;
+    --muted: #b4bfd0;
+    --light-bg: #f4f6fa;
+    --text-dark: #172238;
+    --border-dark: rgba(255, 255, 255, 0.12);
+    --radius: 18px;
+    --transition: 0.25s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--light-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 4px;
+}
+
+/* 2. Navigation */
+.navbar {
+    background: var(--navy);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.navbar-brand {
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: -0.4px;
+}
+
+.navbar-brand span {
+    color: var(--gold);
+}
+
+.navbar .nav-link {
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin: 0 5px;
+    transition: color var(--transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: var(--gold);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(228, 182, 92, 0.25);
+}
+
+/* 3. Buttons */
+.btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 23px;
+    color: var(--navy);
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    font-weight: 700;
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.btn-gold:hover {
+    color: var(--navy);
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(228, 182, 92, 0.18);
+}
+
+.btn-outline-light {
+    border-radius: 10px;
+    padding: 12px 22px;
+}
+
+.btn-outline-light:hover {
+    color: var(--navy);
+}
+
+/* 4. Hero section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 110px;
+    color: var(--white);
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(72, 197, 181, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(228, 182, 92, 0.09),
+            transparent 30%
+        ),
+        var(--navy);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: -130px;
+    right: -130px;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(228, 182, 92, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.eyebrow {
+    margin-bottom: 15px;
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.hero-section h1 {
+    max-width: 760px;
+    margin-bottom: 25px;
+    font-size: clamp(2.5rem, 5.3vw, 4.7rem);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero-section h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 630px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.trust-note {
+    margin-top: 25px;
+    margin-bottom: 0;
+    color: #9aa8bb;
+    font-size: 0.82rem;
+}
+
+/* 5. Hero mission card */
+.hero-card {
+    position: relative;
+    padding: 36px;
+    background: linear-gradient(
+        145deg,
+        rgba(25, 43, 66, 0.96),
+        rgba(15, 29, 48, 0.98)
+    );
+    border: 1px solid rgba(228, 182, 92, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.22);
+    animation: rise-in 0.8s ease both;
+}
+
+.hero-card-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 25px;
+    color: var(--navy);
+    background: var(--gold);
+    border-radius: 15px;
+    font-size: 1.7rem;
+}
+
+.card-label {
+    margin-bottom: 12px;
+    color: var(--teal);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.hero-card h2 {
+    margin-bottom: 16px;
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.hero-card > p:not(.card-label) {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.mission-divider {
+    height: 1px;
+    margin: 25px 0;
+    background: var(--border-dark);
+}
+
+.mission-point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.mission-point span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    color: var(--gold);
+    background: rgba(228, 182, 92, 0.10);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.mission-point p {
+    margin: 0;
+    color: var(--white);
+    font-size: 0.93rem;
+}
+
+/* 6. Shared section styles */
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.section-heading h2,
+.about-section h2,
+.contact-section h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 3.4vw, 2.8rem);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: #647187;
+    font-size: 1.03rem;
+}
+
+/* 7. Community priorities */
+.priorities-section {
+    background: var(--light-bg);
+}
+
+.priority-card {
+    height: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e7ebf2;
+    border-radius: var(--radius);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.priority-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(228, 182, 92, 0.8);
+    box-shadow: 0 18px 38px rgba(19, 34, 57, 0.08);
+}
+
+.priority-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 20px;
+    background: #f4f0e7;
+    border-radius: 15px;
+    font-size: 1.7rem;
+}
+
+.priority-card h3 {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-size: 1.18rem;
+    font-weight: 800;
+}
+
+.priority-card p {
+    margin: 0;
+    color: #657187;
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+/* 8. About section */
+.about-section {
+    color: var(--white);
+    background: var(--navy-light);
+}
+
+.about-section h2 {
+    max-width: 450px;
+}
+
+.about-section .col-lg-7 > p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.about-section .about-note {
+    margin-top: 25px;
+    padding: 18px 20px;
+    color: #dbe3ef;
+    background: rgba(255, 255, 255, 0.045);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    font-size: 0.9rem;
+}
+
+/* 9. Contact section */
+.contact-section {
+    background: #ffffff;
+}
+
+.contact-section .container {
+    max-width: 850px;
+}
+
+.contact-section h2 {
+    color: var(--text-dark);
+}
+
+.contact-description {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: #657187;
+    font-size: 1.03rem;
+}
+
+.email-address {
+    margin-top: 18px;
+    margin-bottom: 0;
+    color: #59677d;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+/* 10. Footer */
+.site-footer {
+    padding: 30px 0;
+    color: var(--muted);
+    background: #070e19;
+    border-top: 1px solid var(--border-dark);
+}
+
+.footer-brand {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.footer-note,
+.copyright {
+    margin-bottom: 0;
+    font-size: 0.79rem;
+    line-height: 1.7;
+}
+
+/* 11. Entrance animation */
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 12. Tablet and mobile */
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        align-items: stretch !important;
+        padding-top: 18px;
+    }
+
+    .navbar .nav-link {
+        padding: 9px 0;
+    }
+
+    .hero-section {
+        padding: 75px 0 85px;
+    }
+
+    .hero-card {
+        padding: 30px;
+    }
+
+    .section-padding {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding: 14px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.03rem;
+    }
+
+    .hero-section {
+        padding: 62px 0 70px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.35rem, 10vw, 3.2rem);
+        letter-spacing: -1.3px;
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .hero-card h2 {
+        font-size: 1.55rem;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .priority-card {
+        padding: 25px;
+    }
+
+    .section-heading h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   COMMUNITY SURVEY PAGE
+========================================= */
+
+.survey-header {
+    padding: 65px 0 50px;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 90% 10%, rgba(72, 197, 181, 0.10), transparent 28%),
+        var(--navy);
+}
+
+.survey-header h1 {
+    margin-bottom: 10px;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.survey-header h2 {
+    margin-bottom: 20px;
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.survey-header .container > p:not(.eyebrow) {
+    max-width: 780px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.survey-notice,
+.privacy-notice {
+    margin-top: 25px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.survey-notice {
+    color: #e7edf6;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--gold);
+}
+
+.survey-main {
+    padding: 60px 0 85px;
+    background: var(--light-bg);
+}
+
+.survey-form-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 42px;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(19, 34, 57, 0.06);
+}
+
+.survey-form-heading {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.survey-form-heading h2 {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.survey-form-heading > p:not(.eyebrow) {
+    color: #657187;
+}
+
+.form-help {
+    color: #657187;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.survey-fieldset {
+    min-width: 0;
+    margin: 32px 0;
+    padding: 0;
+    border: 0;
+}
+
+.survey-fieldset legend {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 16px;
+    color: var(--text-dark);
+    border-bottom: 1px solid #e8edf4;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.section-number {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    color: #775313;
+    background: #f8edda;
+    border-radius: 11px;
+    font-size: 0.85rem;
+}
+
+.survey-page .form-label {
+    margin-bottom: 9px;
+    color: #233149;
+    font-size: 0.94rem;
+    font-weight: 700;
+}
+
+.survey-page .form-control,
+.survey-page .form-select {
+    min-height: 49px;
+    padding: 12px 14px;
+    color: var(--text-dark);
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.survey-page textarea.form-control {
+    min-height: 115px;
+    resize: vertical;
+}
+
+.survey-page .form-control:focus,
+.survey-page .form-select:focus {
+    border-color: #c79a43;
+    box-shadow: 0 0 0 3px rgba(228, 182, 92, 0.17);
+}
+
+.survey-page .form-text {
+    color: #657187;
+    line-height: 1.7;
+}
+
+.field-description {
+    margin-bottom: 18px;
+    color: #657187;
+    line-height: 1.8;
+}
+
+.priority-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.survey-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 65px;
+    padding: 16px;
+    color: #233149;
+    background: #fff;
+    border: 1px solid #dfe5ed;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.survey-option:hover {
+    border-color: var(--gold);
+    background: #fffdf8;
+}
+
+.survey-option:has(input:checked) {
+    border-color: #c79a43;
+    background: #fff9ec;
+}
+
+.survey-option input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #b88930;
+}
+
+.survey-option span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.priority-invalid {
+    padding: 10px;
+    border: 1px solid #dc3545;
+    border-radius: 12px;
+}
+
+.form-error {
+    margin-top: 12px;
+    color: #b02a37;
+    font-size: 0.9rem;
+}
+
+.privacy-notice {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #35445a;
+    background: #f0f6f5;
+    border-left: 3px solid var(--teal);
+}
+
+.contact-consent {
+    padding: 18px;
+    background: #f8f9fc;
+    border: 1px solid #e0e6ef;
+    border-radius: 12px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #35445a;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.consent-label input {
+    width: 19px;
+    height: 19px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    accent-color: #b88930;
+}
+
+.survey-submit-area {
+    padding-top: 25px;
+    border-top: 1px solid #e8edf4;
+}
+
+.form-message {
+    padding: 15px 18px;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.form-message.error {
+    color: #842029;
+    background: #f8d7da;
+    border: 1px solid #f1aeb5;
+}
+
+.form-message.notice {
+    color: #084298;
+    background: #cfe2ff;
+    border: 1px solid #9ec5fe;
+}
+
+@media (max-width: 575.98px) {
+    .survey-header {
+        padding: 45px 0 35px;
+    }
+
+    .survey-main {
+        padding: 30px 0 50px;
+    }
+
+    .survey-form-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .priority-options {
+        grid-template-columns: 1fr;
+    }
+
+    .survey-fieldset legend {
+        font-size: 1.05rem;
+    }
+}
