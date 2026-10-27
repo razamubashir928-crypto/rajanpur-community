@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Dashboard | Rajanpur Community Initiative</title>
+  <link rel="stylesheet" href="../../css/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../../js/admin.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark">RC</span>
+      <span>
+        <strong>Rajanpur Community</strong>
+        <small>Initiative · Admin</small>
+      </span>
+    </a>
+    <span class="secure-label">🔒 Private dashboard</span>
+  </header>
+
+  <main class="container">
+    <section id="loginPanel" class="login-panel">
+      <p class="eyebrow">RESTRICTED ACCESS</p>
+      <h1>Admin sign in</h1>
+      <p class="muted">Sign in with your authorized administrator account.</p>
+
+      <form id="loginForm">
+        <label for="adminEmail">Email address</label>
+        <input id="adminEmail" type="email" autocomplete="username"
+          required maxlength="254" placeholder="admin@example.com">
+
+        <label for="adminPassword">Password</label>
+        <input id="adminPassword" type="password"
+          autocomplete="current-password" required>
+
+        <button id="loginButton" type="submit">Sign in securely</button>
+        <p id="loginMessage" class="message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="dashboardPanel" hidden>
+      <div class="welcome-row">
+        <div>
+          <p class="eyebrow">COMMUNITY INSIGHTS</p>
+          <h1>Survey dashboard</h1>
+          <p class="muted">Aggregated results from community responses.</p>
+        </div>
+        <div class="actions">
+          <button id="refreshButton" class="secondary-button" type="button">
+            Refresh data
+          </button>
+          <button id="logoutButton" class="secondary-button" type="button">
+            Sign out
+          </button>
+        </div>
+      </div>
+
+      <p id="dashboardMessage" class="message" role="status"
+        aria-live="polite"></p>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">Total responses</span>
+          <strong id="totalResponses" class="stat-number">—</strong>
+          <span class="stat-foot">All submitted surveys</span>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-label">Areas represented</span>
+          <strong id="areaTotal" class="stat-number">—</strong>
+          <span class="stat-foot">Areas with responses</span>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-label">Priority categories</span>
+          <strong id="priorityTotal" class="stat-number">—</strong>
+          <span class="stat-foot">Categories selected</span>
+        </article>
+      </div>
+
+      <div class="charts-grid">
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">GEOGRAPHIC OVERVIEW</p>
+              <h2>Responses by area</h2>
+            </div>
+          </div>
+          <div id="areaChart" class="bar-list">
+            <p class="muted">Sign in to load statistics.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">COMMUNITY NEEDS</p>
+              <h2>Top priorities</h2>
+            </div>
+          </div>
+          <div id="priorityChart" class="bar-list">
+            <p class="muted">Sign in to load statistics.</p>
+          </div>
+          <p class="chart-note">
+            A response may select up to three priorities, so priority totals
+            can exceed the number of survey responses.
+          </p>
+        </section>
+      </div>
+
+      <footer class="privacy-note">
+        <strong>Privacy first.</strong>
+        This dashboard displays aggregate statistics only. It does not display
+        respondents' names, phone numbers, email addresses or written answers.
+      </footer>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Rajanpur Community Initiative · Independent community survey
+  </footer>
+</body>
+</html>

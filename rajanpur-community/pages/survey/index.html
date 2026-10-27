@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Share your views about community needs in Rajanpur, Jampur, Dajal and Kot Mithan.">
+
+    <title>Community Survey | Rajanpur Community Initiative</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Existing website design -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Survey-specific design will be added in the next step -->
+</head>
+
+<body class="survey-page">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                Rajanpur<span> Community</span>
+            </a>
+
+            <a href="../../index.html" class="btn btn-outline-light btn-sm">
+                ← Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Survey introduction -->
+    <header class="survey-header">
+        <div class="container">
+            <p class="eyebrow">COMMUNITY VOICES · COMMUNITY SOLUTIONS</p>
+
+            <h1>Share Your Voice</h1>
+            <h2 lang="ur" dir="rtl">اپنی رائے کا اظہار کریں</h2>
+
+            <p>
+                Help us understand the needs and priorities of your area.
+                Your answers can help us prepare a community findings report.
+            </p>
+
+            <p lang="ur" dir="rtl">
+                اپنے علاقے کے مسائل اور ترجیحات سے ہمیں آگاہ کریں۔
+                آپ کی رائے کمیونٹی رپورٹ تیار کرنے میں مدد دے سکتی ہے۔
+            </p>
+
+            <div class="survey-notice">
+                <strong>Before you begin:</strong>
+                This is an independent community initiative, not a government
+                service. Participation is voluntary. Do not include sensitive
+                personal information in your answers.
+                <p class="mb-0 mt-2" lang="ur" dir="rtl">
+                    یہ ایک آزاد کمیونٹی اقدام ہے، سرکاری سروس نہیں۔
+                    حصہ لینا آپ کی مرضی ہے۔
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Survey form -->
+    <main class="survey-main">
+        <div class="container">
+            <div class="survey-form-card">
+
+                <div class="survey-form-heading">
+                    <p class="eyebrow">YOUR COMMUNITY MATTERS</p>
+                    <h2>Community Needs Survey</h2>
+                    <p lang="ur" dir="rtl">کمیونٹی کے مسائل سے متعلق سروے</p>
+                    <p class="form-help">
+                        Fields marked with * are required.
+                        / ستارے (*) والے خانے لازمی ہیں۔
+                    </p>
+                </div>
+
+                <form id="communitySurveyForm" novalidate>
+
+                    <!-- Section 1: Basic information -->
+                    <fieldset class="survey-fieldset">
+                        <legend>
+                            <span class="section-number">01</span>
+                            About You / آپ کے بارے میں
+                        </legend>
+
+                        <div class="mb-4">
+                            <label for="fullName" class="form-label">
+                                Full name * / پورا نام
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="fullName"
+                                name="fullName"
+                                autocomplete="name"
+                                maxlength="100"
+                                required
+                                placeholder="Enter your full name"
+                            >
+                            <div class="invalid-feedback">
+                                Please enter your name.
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="area" class="form-label">
+                                Your area * / آپ کا علاقہ
+                            </label>
+                            <select
+                                class="form-select"
+                                id="area"
+                                name="area"
+                                required
+                            >
+                                <option value="">Select your area</option>
+                                <option value="Rajanpur City">Rajanpur City</option>
+                                <option value="Jampur">Jampur</option>
+                                <option value="Dajal">Dajal</option>
+                                <option value="Kot Mithan">Kot Mithan</option>
+                                <option value="Other">Other area / دیگر علاقہ</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select your area.
+                            </div>
+                        </div>
+
+                        <div class="mb-4" id="otherAreaGroup" hidden>
+                            <label for="otherArea" class="form-label">
+                                Please specify your area / اپنا علاقہ لکھیں
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="otherArea"
+                                name="otherArea"
+                                maxlength="100"
+                                placeholder="Area or town name"
+                            >
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="profession" class="form-label">
+                                Your profession * / آپ کیا کرتے ہیں؟
+                            </label>
+                            <select
+                                class="form-select"
+                                id="profession"
+                                name="profession"
+                                required
+                            >
+                                <option value="">Select your profession</option>
+                                <option value="Student">Student / طالب علم</option>
+                                <option value="Teacher">Teacher or Lecturer / استاد</option>
+                                <option value="Healthcare">Healthcare professional / صحت کا شعبہ</option>
+                                <option value="Government employee">Government employee / سرکاری ملازم</option>
+                                <option value="Private employee">Private-sector employee / نجی ملازم</option>
+                                <option value="Business owner">Business owner / کاروبار</option>
+                                <option value="Farmer">Farmer or agriculture worker / کسان</option>
+                                <option value="Freelancer">Freelancer / فری لانسر</option>
+                                <option value="Other">Other / دیگر</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select your profession.
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="organization" class="form-label">
+                                School, college, workplace or organization
+                                / ادارے یا کام کی جگہ کا نام
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="organization"
+                                name="organization"
+                                maxlength="150"
+                                placeholder="Optional / اختیاری"
+                            >
+                            <div class="form-text">
+                                Optional. Do not provide private information
+                                about other people.
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section 2: Community priorities -->
+                    <fieldset class="survey-fieldset">
+                        <legend>
+                            <span class="section-number">02</span>
+                            Community Priorities / اہم مسائل
+                        </legend>
+
+                        <p class="field-description">
+                            Select up to three issues that need the most
+                            attention in your area.
+                            / اپنے علاقے کے زیادہ سے زیادہ تین اہم مسائل منتخب کریں۔
+                        </p>
+
+                        <div id="priorityOptions" class="priority-options">
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Education">
+                                <span>🎓 Education / تعلیم</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Healthcare">
+                                <span>🏥 Healthcare / صحت</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Clean water and sanitation">
+                                <span>💧 Clean water and sanitation / صاف پانی</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Roads and transport">
+                                <span>🛣️ Roads and transport / سڑکیں اور ٹرانسپورٹ</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Employment and skills">
+                                <span>💼 Jobs and skills / روزگار اور ہنر</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Agriculture and irrigation">
+                                <span>🌾 Agriculture and irrigation / زراعت اور آبپاشی</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Internet and digital access">
+                                <span>📶 Internet and digital access / انٹرنیٹ</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Electricity">
+                                <span>💡 Electricity / بجلی</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Waste management">
+                                <span>♻️ Waste management / صفائی</span>
+                            </label>
+
+                            <label class="survey-option">
+                                <input type="checkbox" name="priorities"
+                                       value="Other">
+                                <span>Other issue / کوئی اور مسئلہ</span>
+                            </label>
+
+                        </div>
+
+                        <div id="priorityError" class="form-error" role="alert"
+                             hidden>
+                            Please select between one and three priorities.
+                        </div>
+
+                        <div class="mt-4" id="otherIssueGroup" hidden>
+                            <label for="otherIssue" class="form-label">
+                                Other issue / دوسرا مسئلہ
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="otherIssue"
+                                name="otherIssue"
+                                maxlength="200"
+                                placeholder="Describe the issue briefly"
+                            >
+                        </div>
+                    </fieldset>
+
+                    <!-- Section 3: Details -->
+                    <fieldset class="survey-fieldset">
+                        <legend>
+                            <span class="section-number">03</span>
+                            Tell Us More / مزید تفصیل
+                        </legend>
+
+                        <div class="mb-4">
+                            <label for="issueDetails" class="form-label">
+                                What is the main problem in your area?
+                                / آپ کے علاقے کا سب سے بڑا مسئلہ کیا ہے؟ *
+                            </label>
+                            <textarea
+                                class="form-control"
+                                id="issueDetails"
+                                name="issueDetails"
+                                rows="4"
+                                minlength="10"
+                                maxlength="1500"
+                                required
+                                placeholder="Describe the issue without sharing sensitive personal information."
+                            ></textarea>
+                            <div class="invalid-feedback">
+                                Please provide at least 10 characters.
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="solution" class="form-label">
+                                What solution would you suggest?
+                                / آپ کیا حل تجویز کریں گے؟
+                            </label>
+                            <textarea
+                                class="form-control"
+                                id="solution"
+                                name="solution"
+                                rows="3"
+                                maxlength="1500"
+                                placeholder="Your idea or suggested solution / آپ کی تجویز"
+                            ></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section 4: Optional contact information -->
+                    <fieldset class="survey-fieldset">
+                        <legend>
+                            <span class="section-number">04</span>
+                            Optional Contact Details / رابطے کی معلومات
+                        </legend>
+
+                        <div class="privacy-notice">
+                            <strong>Your privacy matters.</strong>
+                            These details are optional and must not be shown
+                            on the public results dashboard. No response will
+                            be transmitted or stored until a shared backend
+                            is connected.
+                            <p class="mb-0 mt-2" lang="ur" dir="rtl">
+                                رابطے کی معلومات دینا اختیاری ہے۔ یہ معلومات
+                                عوامی نتائج میں ظاہر نہیں کی جائیں گی۔
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="form-label">
+                                Phone number / فون نمبر
+                            </label>
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="phone"
+                                name="phone"
+                                autocomplete="tel"
+                                maxlength="25"
+                                placeholder="e.g. 03XXXXXXXXX (optional)"
+                            >
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="form-label">
+                                Email address / ای میل
+                            </label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                maxlength="254"
+                                placeholder="you@example.com (optional)"
+                            >
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="contact-consent">
+                            <label class="consent-label" for="contactConsent">
+                                <input
+                                    type="checkbox"
+                                    id="contactConsent"
+                                    name="contactConsent"
+                                    value="yes"
+                                >
+                                <span>
+                                    <strong>Contact permission (optional)</strong>
+                                    <br>
+                                    I agree that the initiative team may contact
+                                    me using the details I provided to discuss
+                                    community issues and follow-up suggestions.
+                                    I can choose not to give this permission.
+                                    <br>
+                                    <span lang="ur" dir="rtl">
+                                        میں کمیونٹی کے مسائل پر بات چیت کے لیے
+                                        رابطے کی اجازت دیتا/دیتی ہوں۔
+                                        یہ اجازت اختیاری ہے۔
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submission -->
+                    <div class="survey-submit-area">
+                        <p class="form-help">
+                            This form is a front-end prototype. Submitting it
+                            will not save or send your answers yet.
+                        </p>
+
+                        <button type="submit" class="btn btn-gold btn-lg w-100">
+                            Validate My Answers / جوابات چیک کریں
+                        </button>
+
+                        <div id="formMessage" class="form-message mt-3"
+                             role="status" aria-live="polite" hidden></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p class="footer-brand">Rajanpur Community Initiative</p>
+            <p class="footer-note">
+                Independent community initiative · Not an official government service.
+            </p>
+            <a href="mailto:rajanpurcommunity@gmail.com">
+                rajanpurcommunity@gmail.com
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- Survey behaviour will be implemented here -->
+    <script src="../../js/survey.js"></script>
+
+</body>
+</html>
